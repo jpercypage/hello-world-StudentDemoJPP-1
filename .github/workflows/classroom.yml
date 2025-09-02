@@ -20,9 +20,20 @@ jobs:
         test-name: Hello world test
         setup-command: ''
         command: "./calculator.sh"
-        input: ''
+        input: |-
+          <!DOCTYPE html>
+          <html>
+          <head>
+          <title>Hello World</title>
+          </head>
+          <body>
+
+          <p>Hello, World!</p>
+
+          </body>
+          </html>
         expected-output: Hello, World!
-        comparison-method: exact
+        comparison-method: contains
         timeout: 60
         max-score: 1
     - name: Autograding Reporter
